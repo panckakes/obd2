@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+  <p>Hello:{{ user.username }}</p>
+  <p>Your Current email is:{{ user.email }}</p>
+  <p>the date when you signed up is:{{ user.date }}</p>
+
+
+  <p>Your Added tasks--</p>
+  <div>
+    {% for i in user.tasks %}
+      <p>{{ i.title }} -- {{ i.description }}</p>
+    {% endfor %}
+  </div>
+
+{% endblock %}

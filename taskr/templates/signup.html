@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% from "form_macros.html" import render_field %}
+
+{% block content %}
+
+  WTF form style - test
+  <form action="" method="post">
+  {{ form.csrf_token }}
+
+  <div>{{ render_field(form.username, size=50) }}</div>
+  <div>{{ render_field(form.password, size=50) }}</div>
+  <div>{{ render_field(form.password_validate, size=50) }}</div>
+    <div>{{ render_field(form.email, size=50) }}</div>
+  <button type="submit">wtf submit</button>
+  </form>
+
+  <hr>
+
+  <br>
+
+
+<a href="{{ url_for('index') }}">Back to index</a>
+
+{% endblock %}

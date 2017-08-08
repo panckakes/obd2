@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="" method="post">
+  {{ form.csrf_token }}
+  <div>{{ form.title(size=80) }}</div>
+  <div>{{ form.description(size=120) }}</div>
+  <button type="submit">wtf task submit</button>
+</form>
+
+  <p>tasks</p>
+  <div>
+    {% for i in tasks %}
+
+      <p>{{ i.title }}</p>
+    {% endfor %}
+  </div>
+
+{% endblock %}
